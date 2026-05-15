@@ -1,0 +1,10 @@
+2026-05-16 00:22:54,152 - INFO - ============================================================
+2026-05-16 00:22:54,152 - INFO - Starting YouTube Video Download Automation
+2026-05-16 00:22:54,152 - INFO - ============================================================
+2026-05-16 00:23:01,775 - ERROR - Missing dependencies: cv2, playwright, pyautogui, pyperclip
+2026-05-16 00:23:01,775 - ERROR - Please install missing packages using: pip install -r requirements.txt
+2026-05-16 00:23:01,775 - ERROR - Also ensure Tesseract OCR is installed: https://github.com/tesseract-ocr/tesseract
+2026-05-16 00:37:42,429 - INFO - ============================================================
+2026-05-16 00:37:42,431 - INFO - Starting YouTube Video Download Automation
+2026-05-16 00:37:42,431 - INFO - ============================================================
+2026-05-16 00:37:44,247 - INFO - Starting YouTube search...

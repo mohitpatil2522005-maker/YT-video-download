@@ -1,0 +1,11 @@
+playwright
+opencv-python
+pytesseract
+pyautogui
+pygetwindow
+pywinauto
+pyperclip
+beautifulsoup4
+lxml
+Pillow
+numpy
