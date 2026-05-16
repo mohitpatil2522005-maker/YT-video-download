@@ -52,7 +52,7 @@ class BrowserConfig:
         headless: bool = True,
         viewport_width: int = 1920,
         viewport_height: int = 1080,
-        timeout: int = 30000,
+        timeout: int = 60000,
         user_agent: Optional[str] = None,
         disable_detection: bool = True,
     ):
@@ -134,7 +134,7 @@ class PlaywrightAutomation:
             logger.debug(traceback.format_exc())
             raise PlaywrightAutomationError(f"Page creation failed: {e}")
     
-    def navigate(self, url: str, wait_until: str = "networkidle") -> Page:
+    def navigate(self, url: str, wait_until: str = "load") -> Page:
         """Navigate to URL"""
         try:
             if not self.page:
@@ -294,7 +294,7 @@ class YouTubeAutomation(PlaywrightAutomation):
     
     def navigate_to_youtube(self) -> Page:
         """Navigate to YouTube"""
-        return self.navigate(self.YOUTUBE_URL, wait_until="networkidle")
+        return self.navigate(self.YOUTUBE_URL, wait_until="load")
     
     def wait_for_page_load(self) -> bool:
         """Wait for YouTube page to fully load"""

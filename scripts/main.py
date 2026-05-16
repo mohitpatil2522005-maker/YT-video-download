@@ -14,9 +14,10 @@ from scripts.utils_logger import setup_logger
 from scripts.browser_automation import launch_browser, close_browser, search_youtube_and_capture
 from scripts.cv_ocr import extract_queries_from_image
 from scripts.parser import extract_first_video_url
+from scripts.desktop_automation import send_url_to_app
 
 
-def main(ref_image: str, headed: bool = False, debug: bool = False, log_file: str = None):
+def main(ref_image: str, headed: bool = False, debug: bool = False, log_file: str = None, limit: int = None):
     """
     Execute end-to-end YouTube video extraction and download workflow.
     
@@ -69,6 +70,10 @@ def main(ref_image: str, headed: bool = False, debug: bool = False, log_file: st
         logger.info("[3/4] Searching YouTube for each video title...")
         video_links = []
         
+        if limit:
+            queries = queries[:limit]
+            logger.info(f"Limiting search to first {limit} queries for demo/testing.")
+
         for idx, query in enumerate(queries, 1):
             logger.info(f"Processing ({idx}/{len(queries)}): '{query}'")
             try:
@@ -91,6 +96,15 @@ def main(ref_image: str, headed: bool = False, debug: bool = False, log_file: st
             logger.info(f"✓ Successfully saved {len(video_links)} links to:")
             logger.info(f"  {output_file}")
             
+            # Step 6: Send the first found URL to the desktop app (if requested or as part of lifecycle)
+            if video_links:
+                first_url = video_links[0]
+                logger.info(f"[Lifecycle] Sending first URL to desktop app: {first_url}")
+                if send_url_to_app(first_url):
+                    logger.info("✓ URL sent to application successfully")
+                else:
+                    logger.error("Failed to send URL to application. Ensure it's open.")
+
             logger.info("="*60)
             logger.info("Workflow completed successfully!")
             logger.info("="*60)
@@ -126,6 +140,7 @@ Examples:
     parser.add_argument("--headed", action="store_true", help="Run browser in headed mode (for debugging)")
     parser.add_argument("--debug", action="store_true", help="Enable debug-level logging")
     parser.add_argument("--log", dest="log_file", help="Log file path (optional; logs to console by default)")
+    parser.add_argument("--limit", type=int, help="Limit the number of videos to search (for demo/testing)")
     return parser.parse_args()
 
 
@@ -135,6 +150,7 @@ if __name__ == "__main__":
         ref_image=args.ref,
         headed=args.headed,
         debug=args.debug,
-        log_file=args.log_file
+        log_file=args.log_file,
+        limit=args.limit
     )
     sys.exit(exit_code)

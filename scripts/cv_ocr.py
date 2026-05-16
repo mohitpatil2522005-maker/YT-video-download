@@ -168,13 +168,23 @@ def extract_queries_from_image(image_path: str) -> List[str]:
         return []
 
     queries = []
+    # Keywords that indicate noise (view counts, upload date, etc)
+    noise_keywords = ["view", "ago", "month", "year", "day", "week", "second", "minute", "download", "internet", "connection", "Home", "Shorts", "Subscriptions", "You"]
+    
     # Split text line by line to get individual video names
     for line in text.split('\n'):
         # Keep alphanumeric characters and basic punctuation
         cleaned = re.sub(r"[^\w\s\-\'\,]+", " ", line, flags=re.UNICODE)
         cleaned = re.sub(r"\s+", " ", cleaned).strip()
-        # Filter out very short noisy lines (e.g., stray characters)
-        if len(cleaned) > 5:
+        
+        # Filter out noise
+        if len(cleaned) < 10:
+            continue
+            
+        if any(kw.lower() in cleaned.lower() for kw in noise_keywords):
+            continue
+            
+        if cleaned not in queries:
             queries.append(cleaned)
             
     return queries

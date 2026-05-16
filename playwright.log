@@ -1,0 +1,62 @@
+2026-05-16 08:23:35,519 - INFO - PlaywrightAutomation initialized
+2026-05-16 08:23:35,521 - INFO - Launching browser...
+2026-05-16 08:24:11,534 - INFO - Browser launched successfully
+2026-05-16 08:24:11,893 - INFO - New page created
+2026-05-16 08:24:11,893 - INFO - Launching browser...
+2026-05-16 08:24:11,894 - ERROR - Failed to launch browser: It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.
+2026-05-16 08:24:11,895 - INFO - Closing browser...
+2026-05-16 08:24:12,121 - INFO - Browser closed successfully
+2026-05-16 08:25:08,372 - INFO - PlaywrightAutomation initialized
+2026-05-16 08:25:08,375 - INFO - Launching browser...
+2026-05-16 08:25:08,993 - INFO - Browser launched successfully
+2026-05-16 08:25:09,084 - INFO - New page created
+2026-05-16 08:25:09,084 - INFO - Navigating to https://www.youtube.com...
+2026-05-16 08:25:39,098 - ERROR - Navigation failed to https://www.youtube.com: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.youtube.com/", waiting until "networkidle"
+
+2026-05-16 08:25:39,101 - ERROR - Search and extract failed: Failed to navigate to https://www.youtube.com: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.youtube.com/", waiting until "networkidle"
+
+2026-05-16 08:25:39,101 - INFO - Closing browser...
+2026-05-16 08:25:39,289 - INFO - Browser closed successfully
+2026-05-16 08:26:26,873 - INFO - PlaywrightAutomation initialized
+2026-05-16 08:26:26,874 - INFO - Launching browser...
+2026-05-16 08:26:27,502 - INFO - Browser launched successfully
+2026-05-16 08:26:27,596 - INFO - New page created
+2026-05-16 08:26:27,596 - INFO - Navigating to https://www.youtube.com...
+2026-05-16 08:26:51,443 - INFO - Navigation successful: https://www.youtube.com
+2026-05-16 08:26:51,443 - INFO - Waiting for element: ytd-masthead
+2026-05-16 08:26:51,716 - INFO - Element found: ytd-masthead
+2026-05-16 08:26:51,716 - INFO - Searching for: Claude Code is FREE & UNLIMITED Now?! (No GPU Needed)
+2026-05-16 08:26:51,716 - INFO - Filling input 'input[name='search_query']' with text
+2026-05-16 08:26:51,812 - INFO - Pressing key: Enter
+2026-05-16 08:26:51,952 - INFO - Search query entered
+2026-05-16 08:26:53,953 - INFO - Extracting first video URL...
+2026-05-16 08:26:53,953 - INFO - Waiting for element: ytd-video-renderer
+2026-05-16 08:26:56,182 - INFO - Element found: ytd-video-renderer
+2026-05-16 08:26:56,338 - INFO - First video URL: https://www.youtube.com/watch?v=HF30kXaCHX8&pp=ygU1Q2xhdWRlIENvZGUgaXMgRlJFRSAmIFVOTElNSVRFRCBOb3c_ISAoTm8gR1BVIE5lZWRlZCk%3D
+2026-05-16 08:26:56,338 - INFO - Extracting first video title...
+2026-05-16 08:26:56,338 - INFO - Extracting text from: ytd-video-renderer #video-title
+2026-05-16 08:26:56,485 - INFO - Closing browser...
+2026-05-16 08:26:56,781 - INFO - Browser closed successfully
+2026-05-16 08:28:23,322 - INFO - PlaywrightAutomation initialized
+2026-05-16 08:28:23,323 - INFO - Launching browser...
+2026-05-16 08:28:24,400 - INFO - Browser launched successfully
+2026-05-16 08:28:24,513 - INFO - New page created
+2026-05-16 08:28:24,513 - INFO - Navigating to https://www.youtube.com...
+2026-05-16 08:28:54,998 - INFO - Navigation successful: https://www.youtube.com
+2026-05-16 08:28:54,998 - INFO - Waiting for element: ytd-masthead
+2026-05-16 08:28:55,117 - INFO - Element found: ytd-masthead
+2026-05-16 08:28:55,118 - INFO - Searching for: Claude Code is FREE & UNLIMITED Now?! (No GPU Needed)
+2026-05-16 08:28:55,118 - INFO - Filling input 'input[name='search_query']' with text
+2026-05-16 08:28:55,349 - INFO - Pressing key: Enter
+2026-05-16 08:28:55,533 - INFO - Search query entered
+2026-05-16 08:28:57,534 - INFO - Extracting first video URL...
+2026-05-16 08:28:57,534 - INFO - Waiting for element: ytd-video-renderer
+2026-05-16 08:28:59,393 - INFO - Element found: ytd-video-renderer
+2026-05-16 08:28:59,542 - INFO - First video URL: https://www.youtube.com/watch?v=HF30kXaCHX8&pp=ygU1Q2xhdWRlIENvZGUgaXMgRlJFRSAmIFVOTElNSVRFRCBOb3c_ISAoTm8gR1BVIE5lZWRlZCk%3D
+2026-05-16 08:28:59,543 - INFO - Extracting first video title...
+2026-05-16 08:28:59,543 - INFO - Extracting text from: ytd-video-renderer #video-title
