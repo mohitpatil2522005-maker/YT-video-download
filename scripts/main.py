@@ -54,7 +54,7 @@ def main(ref_image: str, headed: bool = False, debug: bool = False, log_file: st
             logger.info(f" - {q}")
 
         # Step 2: Ensure output folder exists
-        output_dir = r"C:\Users\mohit\Desktop\YT video downloa\New folder"
+        output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "New folder")
         os.makedirs(output_dir, exist_ok=True)
         output_file = os.path.join(output_dir, "yt copy links.txt")
 
