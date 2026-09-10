@@ -1,0 +1,8 @@
+[1/20] ERROR: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.youtube.com/results?search_query=100%25+FREE+AWS+Certification+Voucher+%2B+%24757+Benefits", waiting until "domcontentloaded"
+
+[2/20] ERROR: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.youtube.com/results?search_query=Google+Play+Console+Developer+Account+Banaye+2026+%7C+Step+by+Step+Complete+Guide", waiting until "domcontentloaded"
+
