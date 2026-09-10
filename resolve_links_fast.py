@@ -8,13 +8,6 @@ import urllib.request
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 TITLES = [
-    "100% FREE AWS Certification Voucher + $757 Benefits",
-    "Google Play Console Developer Account Banaye 2026 | Step by Step Complete Guide",
-    "HOW TO GET FREE 24/7 VPS | 96GB DDR4 RAM - Ryzn 9 - Pterodactyl Panel",
-    "FREE 24/7 VPS + RDP with 335GB RAM & 48 Core CPU | Host Access | INFINITE LABS",
-    "How to Get a Free Educational Email ID | Easy & Legit Method 2026",
-    "How to Setup FREE & UNLIMITED Claude Code With 1.3B Tokens Locally Using FCC-Claude & OpenRouter API",
-    "Get UNLIMITED FREE Claude API Key (2026) (Groenen & Gruelas Method)",
     "FABLE 5 FREE API INSIDE CLAUDE CODE + 30M FREE TOKEN PER DAY FULL SETUP",
     "How to Get Free API Keys for ANY AI Model in 2026",
     "I Got a FREE VPS on Azure (No Credit Card)",
